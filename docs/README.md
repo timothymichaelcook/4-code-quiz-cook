@@ -1,4 +1,4 @@
-# Challenge3 Password Generator Cook
+# Challenge4 Code Quiz Cook
 
 Project Page: [Project Page](https://timothymichaelcook.github.io/challenge3-password-generator-cook/)
 
@@ -6,7 +6,13 @@ Project Repo: [Github-pages](https://github.com/timothymichaelcook/challenge3-pa
 
 ## Description
 
-This webpage will generate a password between 8-128 characters in length. Also, this webpage has the ability to add diferent character sets to you password, whether you need a lowercase only password. Click the Blue Generate Password button to get started.
+Navbar: Time
+
+4 Pages
+Start Page
+Quiz Page
+Results Page
+High Scores
 
 ## User Story
 
