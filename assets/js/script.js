@@ -6,7 +6,7 @@ const resultEl = document.querySelector("#result");
 //this is the quiz object that contains different properties and methods
 let quiz = {
     //properties
-    timer: "5",
+    timer: "30",
     score: 0,
     //this array will store users initials and scores
     userData: [],
@@ -54,7 +54,7 @@ let quiz = {
             answer: "Output device"
         },
         {
-            question: "Which one of the following does not fall under the category of the secondry storage device?",
+            question: "Which one of the following does not fall under the category of secondry storage device?",
             answer: "Hard disk"
         },
         {
