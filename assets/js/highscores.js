@@ -18,8 +18,8 @@ function renderTable() {
   var tableHeader2 = document.createElement("th");
   tableHeader1.textContent = "Initials";
   tableHeader2.textContent = "Score";
-  tableHeader1.setAttribute("class", "p-2 border border-primary");
-  tableHeader2.setAttribute("class", "p-2 border border-primary");
+  tableHeader1.setAttribute("class", "p-2 border border-dark");
+  tableHeader2.setAttribute("class", "p-2 border border-dark");
   tableEl.appendChild(row1);
   tableEl.appendChild(tableHeader1);
   tableEl.appendChild(tableHeader2);
@@ -37,9 +37,9 @@ function renderTable() {
       var tableDataScore = document.createElement("td");
 
       tableDataInitials.textContent = initial;
-      tableDataInitials.setAttribute("class", "p-2 border border-primary");
+      tableDataInitials.setAttribute("class", "p-2 border border-dark");
       tableDataScore.textContent = score;
-      tableDataScore.setAttribute("class", "p-2 border border-primary");
+      tableDataScore.setAttribute("class", "p-2 border border-dark");
 
       tableRow.appendChild(tableDataInitials);
       tableRow.appendChild(tableDataScore);
