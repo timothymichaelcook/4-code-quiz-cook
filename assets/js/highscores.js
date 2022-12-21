@@ -2,11 +2,13 @@
 var tableEl = document.querySelector("#table");
 var clearEl = document.querySelector("#clear");
 
+
 // Adding Event Listener to clear ID element
 clearEl.addEventListener("click", function() {
   localStorage.removeItem("userData");
   renderTable();
 });
+
 
 // Render Table Function
 function renderTable() {

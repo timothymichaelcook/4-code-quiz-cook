@@ -218,26 +218,17 @@ let quiz = {
         if(quiz.timer > 0){
             //this grabs the correct answer by id
             let x = document.getElementById("correctAnswer");
-            //Creates new sound variables
-            //let correctSound = new sound("./sounds/soundsilk-Correct.mp3");
-            //let incorrectSound = new sound("./sounds/soundsilk-Incorrect.mp3");
             //checks if this is the correct answer
             if(event.target.innerHTML === x.textContent){
                 //this adds one to the score
                 quiz.score++;
                 //this will display the result of the answer chosen
                 quiz.displayResult("correct");
-                //Sound is from https://soundsilk.com and will play the correct ding sound
-                //correctSound.play();
                 //this will generate the next question
                 return quiz.generateQuestion();
             } else {
-                //this deducts time from the quiz timer according to difficulty
-                //quiz.timer = quiz.timer - quiz.difficulty;
                 //this will display the result of the answer chosen
                 quiz.displayResult("incorrect");
-                //Sound is from https://soundsilk.com and will play the incorrect buzzer sound
-                //incorrectSound.play();
                 //this will generate the next question
                 return quiz.generateQuestion();
             };
@@ -328,5 +319,7 @@ function init(){
     }
     quiz.reset();
 };
+
+
 //this initializes the quiz page
 init();
