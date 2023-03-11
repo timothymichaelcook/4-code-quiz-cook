@@ -47,10 +47,21 @@ function quizEnd() {
   
 }
 
+// Declare clockTick function
 function clockTick() {
-  
+  //Decrease time by one unit
+  time--;
+  //Assign text content of timerElement variable to time variable
+  timerElement.textContent = time;
+
+  // Conditional checking if time is zero
+  if (time <= 0) {
+    // Call quizEnd function
+    quizEnd();
+  }
 }
 
+// Declare saveHighScore function
 function saveHighScore() {
   
 }
@@ -63,7 +74,7 @@ function checkForEnter(event) {
   }
 }
 
-//EVENT LISTENERS SECTION
+//EVENT LISTENER SECTION
 // User clicks this button to start quiz
 startButton.onclick = startQuiz;
 
