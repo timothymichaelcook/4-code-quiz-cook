@@ -1,5 +1,5 @@
 
-// Declare variables section
+// VARIABLES SECTION
 // Declare quiz variables
 var currentQuestionIndex = 0;
 var time = questions.length * 15;
@@ -14,7 +14,7 @@ var startButton = document.getElementById('start');
 var initialsElement = document.getElementById('initials');
 var feedbackElement = document.getElementById('feedback');
 
-// Declare functions section
+// FUNCTIONS SECTION
 // Function that starts quiz
 function startQuiz() {
   // Declared startScreen variable, assigned to DOM element start-screen
@@ -54,26 +54,16 @@ function clockTick() {
 function saveHighScore() {
   
 }
-
+// Declare checkForEnter function passing an event as a parameter
 function checkForEnter(event) {
-  
+  // Conditional if statement checking if enter key is pressed
+  if (event.key === 'Enter') {
+    // Call saveHighScore function
+    saveHighScore();
+  }
 }
 
-function getQuestions() {
-
-  
-}
-
-
-
-
-
-
-
-
-
-
-
+//EVENT LISTENERS SECTION
 // User clicks this button to start quiz
 startButton.onclick = startQuiz;
 
