@@ -5,7 +5,6 @@ var currentQuestionIndex = 0;
 var time = questions.length * 15;
 var timerId;
 
-
 // Declare DOM element variables using getElementById method
 var questionsElement = document.getElementById('questions');
 var timerElement = document.getElementById('time');
@@ -15,11 +14,29 @@ var startButton = document.getElementById('start');
 var initialsElement = document.getElementById('initials');
 var feedbackElement = document.getElementById('feedback');
 
-
-
-
-
 // Declare functions section
+// Function that starts quiz
+function startQuiz() {
+  // Declared startScreen variable, assigned to DOM element start-screen
+  var startScreenElement = document.getElementById('start-screen')
+  // Setting CSS attributes for start screen element with class of hide
+  startScreenElement.setAttribute('class', 'hide');
+
+  // Setting CSS attributes for start screen element with class of unhide
+  questionsElement.removeAttribute('class');
+
+  // Declare timer variable and set it to 1000 milliseconds
+  timerId = setInterval(clockTick, 1000);
+
+  //Displays starting time
+  timerElement.textContent = time;
+
+  //Call getQuestions function
+  getQuestions();
+}
+
+
+
 
 
 
