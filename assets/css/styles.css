@@ -4,13 +4,13 @@ body {
 }
 
 a {
-  color: #563d7c;
+  color: #000000;
   text-decoration: none;
   transition: color 0.1s;
 }
 
 a:hover {
-  color: #8570a5;
+  color: #77a3ef;
 }
 
 button {
@@ -18,7 +18,7 @@ button {
   margin: 5px;
   cursor: pointer;
   font-size: 100%;
-  background-color: #563d7c;
+  background-color: #1783dc;
   border-radius: 5px;
   padding: 2px 10px;
   color: white;
@@ -27,7 +27,7 @@ button {
 }
 
 button:hover {
-  background-color: #8570a5;
+  background-color: #77a3ef;
 }
 
 .choices button {

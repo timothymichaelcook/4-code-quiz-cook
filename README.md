@@ -35,10 +35,10 @@ MIT License
 
 ## Screenshots
 
-![Project Screenshot](./assets/images/screenshot1.png)
-![Project Screenshot](./assets/images/screenshot2.png)
-![Project Screenshot](./assets/images/screenshot3.png)
-![Project Screenshot](./assets/images/screenshot4.png)
+![Project Screenshot](./assets/screenshots/screenshot1.png)
+![Project Screenshot](./assets/screenshots/screenshot2.png)
+![Project Screenshot](./assets/screenshots/screenshot3.png)
+![Project Screenshot](./assets/screenshots/screenshot4.png)
 
 
 ## Contact
