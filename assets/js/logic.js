@@ -43,8 +43,21 @@ function questionClick(event) {
   
 }
 
+// Declare clockTick function
 function quizEnd() {
-  
+  // Stop timer because quiz has ended
+  clearInterval(timerId);
+
+  // Display high scores screen, declare end screen variable and assign to DOM element end-screen
+  var endScreenElement = document.getElementById('end-screen');
+  endScreenElement.removeAttribute('class');
+
+  // Display final score
+  var finalScoreElement = document.getElementById('final-score');
+  finalScoreElement.textContent = time;
+
+  // Hide questions
+  questionsElement.setAttribute('class', 'hide');
 }
 
 // Declare clockTick function
@@ -63,6 +76,27 @@ function clockTick() {
 
 // Declare saveHighScore function
 function saveHighScore() {
+  // Declare initials variable, assign to initialElement variable
+  var initials = initialsElement.value.trim();
+
+  // Conditional to check initials isn't empty/null
+  if (initials !== '') {
+    var highScores = JSON.parse(window.localStorage.getItem('highscores')) || [];
+
+    // Declare newScore object for current user
+    var newScore = {
+      score: time,
+      initials: initials,
+    };
+    
+    // Save newScore variable to local storage
+    highScores.push(newScore);
+    window.localStorage.setItem('highscores', JSON.stringify(highScores));
+
+    // Redirect to highscores.html HTML file
+    window.location.href = 'highscores.html';
+  }
+
   
 }
 // Declare checkForEnter function passing an event as a parameter
