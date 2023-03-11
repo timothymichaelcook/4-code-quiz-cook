@@ -35,7 +35,9 @@ function startQuiz() {
   getQuestions();
 }
 
-
+function getQuestions() {
+  
+}
 
 
 
