@@ -35,10 +35,34 @@ function startQuiz() {
   getQuestions();
 }
 
+// Declare getQuestions function
 function getQuestions() {
+  // Declare variable, assign to object in questions array
+  var currentQuestion = questions[currentQuestionIndex];
 
+  // Update title element with question via text content method
+  var titleElement = document.getElementById('question-title');
+  titleElement.textContent = currentQuestion.title;
+
+  // Clear HTML displaying question
+  choicesElement.innerHTML = '';
+
+  // Iterate choices
+  for (var i = 0; i < currentQuestion.choices.length; i++) {
+    //Create and set attributes for buttons with choices
+    var choice = currentQuestion.choices[i];
+    var choiceNode = document.createElement('button');
+    choiceNode.setAttribute('class', 'choice');
+    choiceNode.setAttribute('value', choice);
+
+    choiceNode.textContent = i + 1 + '. ' + choices;
+
+    // Append element to DOM
+    choicesElement.appendChild(choiceNode);
+  }
 }
 
+// Declare questionClick function
 function questionClick(event) {
   
 }
