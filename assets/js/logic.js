@@ -6,46 +6,46 @@ var time = questions.length * 15;
 var timerId;
 
 // Declare DOM element variables using getElementById method
-var questionsElement = document.getElementById('questions');
-var timerElement = document.getElementById('time');
-var choicesElement = document.getElementById('choices');
-var submitButton = document.getElementById('submit');
-var startButton = document.getElementById('start');
-var initialsElement = document.getElementById('initials');
-var feedbackElement = document.getElementById('feedback');
+var questionsEl = document.getElementById('questions');
+var timerEl = document.getElementById('time');
+var choicesEl = document.getElementById('choices');
+var submitBtn = document.getElementById('submit');
+var startBtn = document.getElementById('start');
+var initialsEl = document.getElementById('initials');
+var feedbackEl = document.getElementById('feedback');
 
 // FUNCTIONS SECTION
 // Function that starts quiz
 function startQuiz() {
   // Declared startScreen variable, assigned to DOM element start-screen
-  var startScreenElement = document.getElementById('start-screen')
+  var startScreenEl = document.getElementById('start-screen')
   // Setting CSS attributes for start screen element with class of hide
-  startScreenElement.setAttribute('class', 'hide');
+  startScreenEl.setAttribute('class', 'hide');
 
   // Setting CSS attributes for start screen element with class of unhide
-  questionsElement.removeAttribute('class');
+  questionsEl.removeAttribute('class');
 
   // Declare timer variable and set it to 1000 milliseconds
   timerId = setInterval(clockTick, 1000);
 
   //Displays starting time
-  timerElement.textContent = time;
+  timerEl.textContent = time;
 
   //Call getQuestions function
-  getQuestions();
+  getQuestion();
 }
 
 // Declare getQuestions function
-function getQuestions() {
+function getQuestion() {
   // Declare variable, assign to object in questions array
   var currentQuestion = questions[currentQuestionIndex];
 
   // Update title element with question via text content method
-  var titleElement = document.getElementById('question-title');
-  titleElement.textContent = currentQuestion.title;
+  var titleEl = document.getElementById('question-title');
+  titleEl.textContent = currentQuestion.title;
 
   // Clear HTML displaying question
-  choicesElement.innerHTML = '';
+  choicesEl.innerHTML = '';
 
   // Iterate choices
   for (var i = 0; i < currentQuestion.choices.length; i++) {
@@ -55,10 +55,10 @@ function getQuestions() {
     choiceNode.setAttribute('class', 'choice');
     choiceNode.setAttribute('value', choice);
 
-    choiceNode.textContent = i + 1 + '. ' + choices;
+    choiceNode.textContent = i + 1 + '. ' + choice;
 
     // Append element to DOM
-    choicesElement.appendChild(choiceNode);
+    choicesEl.appendChild(choiceNode);
   }
 }
 
@@ -73,32 +73,32 @@ function questionClick(event) {
   // Check if choice is correct or wrong
   if (buttonEl.value !== questions[currentQuestionIndex].answer) {
     // Time penalty of 5 seconds, based on instructions on home page
-    time -= 5;
+    time -= 15;
 
     if (time < 0) {
       time = 0;
     }
     
     //Display updated time
-    timerElement.textContent = time;
+    timerEl.textContent = time;
 
-    feedbackElement.textContent = 'Wrong!';
+    feedbackEl.textContent = 'Wrong!';
 
   } else {
-      feedbackElement.textContent = 'Correct';
+      feedbackEl.textContent = 'Correct';
   }
 
-  feedbackElement.setAttribute('class', 'feedback');
-  setTimeOut(function() {
-    feedbackElement.setAttribute('class', 'feedback hide');
+  feedbackEl.setAttribute('class', 'feedback');
+  setTimeout(function() {
+    feedbackEl.setAttribute('class', 'feedback hide');
   }, 1000);
   
   currentQuestionIndex++;
 
-  if (time <= 0 || currentQuestionIndex === questionsElement.length) {
+  if (time <= 0 || currentQuestionIndex === questions.length) {
     quizEnd();
   } else {
-    getQuestions();
+    getQuestion();
   }
 }
 
@@ -108,15 +108,15 @@ function quizEnd() {
   clearInterval(timerId);
 
   // Display high scores screen, declare end screen variable and assign to DOM element end-screen
-  var endScreenElement = document.getElementById('end-screen');
-  endScreenElement.removeAttribute('class');
+  var endScreenEl = document.getElementById('end-screen');
+  endScreenEl.removeAttribute('class');
 
   // Display final score
-  var finalScoreElement = document.getElementById('final-score');
-  finalScoreElement.textContent = time;
+  var finalScoreEl = document.getElementById('final-score');
+  finalScoreEl.textContent = time;
 
   // Hide questions
-  questionsElement.setAttribute('class', 'hide');
+  questionsEl.setAttribute('class', 'hide');
 }
 
 // Declare clockTick function
@@ -124,7 +124,7 @@ function clockTick() {
   //Decrease time by one unit
   time--;
   //Assign text content of timerElement variable to time variable
-  timerElement.textContent = time;
+  timerEl.textContent = time;
 
   // Conditional checking if time is zero
   if (time <= 0) {
@@ -136,11 +136,11 @@ function clockTick() {
 // Declare saveHighScore function
 function saveHighScore() {
   // Declare initials variable, assign to initialElement variable
-  var initials = initialsElement.value.trim();
+  var initials = initialsEl.value.trim();
 
   // Conditional to check initials isn't empty/null
   if (initials !== '') {
-    var highScores = JSON.parse(window.localStorage.getItem('highscores')) || [];
+    var highscores = JSON.parse(window.localStorage.getItem('highscores')) || [];
 
     // Declare newScore object for current user
     var newScore = {
@@ -149,8 +149,8 @@ function saveHighScore() {
     };
     
     // Save newScore variable to local storage
-    highScores.push(newScore);
-    window.localStorage.setItem('highscores', JSON.stringify(highScores));
+    highscores.push(newScore);
+    window.localStorage.setItem('highscores', JSON.stringify(highscores));
 
     // Redirect to highscores.html HTML file
     window.location.href = 'highscores.html';
@@ -169,13 +169,13 @@ function checkForEnter(event) {
 
 //EVENT LISTENER SECTION
 // User clicks this button to start quiz
-startButton.onclick = startQuiz;
+startBtn.onclick = startQuiz;
 
 // User clicks this button to save score
-submitButton.onclick = saveHighScore;
+submitBtn.onclick = saveHighScore;
 
 // User clicks on button containing choices
-choicesElement.onclick = questionClick;
+choicesEl.onclick = questionClick;
 
 // User enters initials, saves when enter key is pressed
-initialsElement.onkeyup = checkForEnter;
+initialsEl.onkeyup = checkForEnter;

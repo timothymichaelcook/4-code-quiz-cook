@@ -1,5 +1,5 @@
 // Declared variable questionsForBeginners, assigned to array containing objects using key, value syntax
-var questionsForBeginners = [
+var questions = [
   {
     title: 'Commonly used data types DO NOT include:',
     choices: ['strings', 'booleans', 'alerts', 'numbers'],
@@ -27,12 +27,17 @@ var questionsForBeginners = [
   },
   {
     title: 'A method in JavaScript uses what naming convention?',
-    choices: ['Kabob Case', 'Underscores', 'Title Case', 'Camel Case'],
+    choices: ['Kebab Case', 'Underscores', 'Title Case', 'Camel Case'],
     answer: 'Camel Case',
   },
   {
     title: 'Which method runs faster for selecting HTML elements with JavaScript?',
     choices: ['getElementById', 'querySelector', 'All of the above', 'None of the above'],
+    answer: 'getElementById',
+  },
+  {
+    title: 'Debugging is an important part of the development process.',
+    choices: ['True', 'False'],
     answer: 'getElementById',
   },
 ];
