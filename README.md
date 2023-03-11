@@ -1,8 +1,8 @@
 # Code Quiz 
 
-Project Page: [Project Page](https://github.com/timothymichaelcook/4-code-quiz-cook)
+Project Page: [Project Page](https://timothymichaelcook.github.io/4-code-quiz-cook)
+Project Repo: [Github-repo](https://github.com/timothymichaelcook/4-code-quiz-cook)
 
-Project Repo: [Github-pages](https://timothymichaelcook.github.io/4-code-quiz-cook/)
 
 ## Description
 
