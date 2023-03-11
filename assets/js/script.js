@@ -1,8 +1,10 @@
-//initalizing needed selectors
+// Declaring variables and assigning to document objects via the querySelector method
 const startButtonEl = document.querySelector("#start");
 const timerEl = document.querySelector("#timer");
 const questionnaireEl = document.querySelector("#questionnaire");
 const resultEl = document.querySelector("#result");
+
+
 //this is the quiz object that contains different properties and methods
 let quiz = {
     //properties
