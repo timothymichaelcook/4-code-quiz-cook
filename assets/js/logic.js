@@ -1,4 +1,3 @@
-
 // VARIABLES SECTION
 // Declare quiz variables
 var currentQuestionIndex = 0;

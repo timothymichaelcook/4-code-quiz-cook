@@ -1,19 +1,19 @@
-# Challenge4 Code Quiz Cook
+# Code Quiz 
 
-Project Page: [Project Page](https://timothymichaelcook.github.io/challenge4-code-quiz-cook/)
+Project Page: [Project Page](https://github.com/timothymichaelcook/4-code-quiz-cook)
 
-Project Repo: [Github-pages](https://github.com/timothymichaelcook/challenge4-code-quiz-cook)
+Project Repo: [Github-pages](https://timothymichaelcook.github.io/4-code-quiz-cook/)
 
 ## Description
 
-The focus of this project was to create an application that displayed a timed quiz, with multiple choice questions are displayed as either correct or incorrect as soon as the click event occurred on the button. The quiz will generate as many questions as possible within the timeframe as repetition is important when learning. Users can save their information in a highscores table that will populate every time a score is saved. This table also has the ability to be cleared or reset back to it's default setting.
+The focus of this project was to create an application that displayed a timed quiz, with multiple choice and T/F questions are displayed as either correct or incorrect as soon as the click event occurred on the button. The quiz will generate as many questions as possible within the time frame as repetition is important when learning. Users can save their information in a high scores table that will populate every time a score is saved. This table also has the ability to be cleared.
 
 ## User Story
 
 ```
-- AS AN elementary school teacher
-- I WANT to have curriculum on computer fundementals
-- SO THAT my students are computer literate
+- AS A teacher
+- I WANT to have quiz on computer programming fundamentals
+- SO THAT my students are knowledgeable about computer programming
 ```
 
 ## Installation
@@ -27,7 +27,7 @@ Users click the "Start Quiz" button which will redirect to a new page with a run
 
 ## Credits
 
-N/A
+University of Richmond Coding Bootcamp
 
 ## License
 
@@ -35,10 +35,10 @@ MIT License
 
 ## Screenshots
 
-![Project Screenshot](./assets/screenshots/screenshot1.png)
-![Project Screenshot](./assets/screenshots/screenshot2.png)
-![Project Screenshot](./assets/screenshots/screenshot3.png)
-![Project Screenshot](./assets/screenshots/screenshot4.png)
+![Project Screenshot](./screenshots/screenshot_1.png)
+![Project Screenshot](./screenshots/screenshot_2.png)
+![Project Screenshot](./screenshots/screenshot_3.png)
+![Project Screenshot](./screenshots/screenshot_4.png)
 
 
 ## Contact
