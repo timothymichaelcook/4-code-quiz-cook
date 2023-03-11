@@ -36,8 +36,34 @@ function startQuiz() {
 }
 
 function getQuestions() {
+
+}
+
+function questionClick(event) {
   
 }
+
+function quizEnd() {
+  
+}
+
+function clockTick() {
+  
+}
+
+function saveHighScore() {
+  
+}
+
+function checkForEnter(event) {
+  
+}
+
+function getQuestions() {
+
+  
+}
+
 
 
 
