@@ -1,35 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>High Scores</title>
-    <!-- Reset CSS -->
-    <link rel="stylesheet" href="../styles/reset.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-</head>
-<body>
-    <header>
-        <!-- Bootstrap Nav Bar -->
-        <nav class="nav nav-fill navbar-dark bg-dark">
-            <a class="nav-link text-white" href="./index.html">Return to Quiz</a>
-        </nav>
-    </header>
-    <!-- Bootstrap Container -->
-    <main class="container text-center">
-        <div class="jumbotron">
-          <h1 class="text-center">High Scores</h1>
-          <table class="table text-center" id="table"></table>
-          <a type="button" class="btn btn-dark" id="return" href="./index.html">Try Again?</a>
-          <button type="button" class="btn btn-dark" id="clear">Clear High Scores</button>
-        </div>
- </main>
-    <!-- Bootstrap Javascript -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <!-- Quiz Script -->
-    <script src="./assets/js/highscores.js"></script> 
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Highscores</title>
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h1>Highscores</h1>
+      <ol id="highscores"></ol>
+
+      <a href="index.html"><button>Go Back</button></a>
+      <button id="clear">Clear Highscores</button>
+    </div>
+
+    <script src="./assets/js/scores.js"></script>
+  </body>
 </html>
