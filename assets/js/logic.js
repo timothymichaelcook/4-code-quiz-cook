@@ -64,7 +64,42 @@ function getQuestions() {
 
 // Declare questionClick function
 function questionClick(event) {
+  var buttonEl = event.target;
+
+  // Check if clicked element is a choice
+  if (!buttonEl.matches('.choice')) {
+    return;
+  }
+  // Check if choice is correct or wrong
+  if (buttonEl.value !== questions[currentQuestionIndex].answer) {
+    // Time penalty of 5 seconds, based on instructions on home page
+    time -= 5;
+
+    if (time < 0) {
+      time = 0;
+    }
+    
+    //Display updated time
+    timerElement.textContent = time;
+
+    feedbackElement.textContent = 'Wrong!';
+
+  } else {
+      feedbackElement.textContent = 'Correct';
+  }
+
+  feedbackElement.setAttribute('class', 'feedback');
+  setTimeOut(function() {
+    feedbackElement.setAttribute('class', 'feedback hide');
+  }, 1000);
   
+  currentQuestionIndex++;
+
+  if (time <= 0 || currentQuestionIndex === questionsElement.length) {
+    quizEnd();
+  } else {
+    getQuestions();
+  }
 }
 
 // Declare clockTick function
